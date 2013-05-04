@@ -1,0 +1,62 @@
+aside{
+	border: 1px solid red;
+	border-radius: 5px;
+	height: 400px;
+	padding: 20px 30px 0 30px ;
+	width: 40%;
+
+}
+aside li{
+	list-style: none;
+	display: inline-block;
+}
+header{
+	background: cyan;
+	box-shadow: inset 0px 0px 10px gray;
+	color: black;
+	height: 140px;
+	text-align: center;
+	width: 100%;
+
+}
+
+h1{
+	font-size: 70px;
+	margin: 0;
+	text-shadow: 2px 2px 2px gray;
+}
+section{
+	
+}
+#box_left, aside{
+	display: inline-block;
+	vertical-align: top;
+}
+#box_left{
+	width: 50%;
+	height: 400px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-top: 20px;
+}
+#caja1{
+
+}
+
+#intro{
+	padding:20px;
+	text-align: center;
+	width: 100%;
+}
+.cajas{
+	margin: 0px auto;
+	width: 80%;
+	height: 100px;
+	border: 2px dotted black;
+}
+.color_boton{
+	width: 60px;
+	height: 25px;
+	border: 1px solid black;
+	display: inline-block;
+}
