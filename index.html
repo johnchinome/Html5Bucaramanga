@@ -23,26 +23,85 @@
 		<section>
 			<h3>Escoje el primer color:</h3>
 			<ul>
-				<li id="boton_1"><div class="color_boton" data-color="amarillo"></li>
-				<li id="boton_2"><div class="color_boton" data-color="cyan"></li>
-				<li id="boton_3"><div class="color_boton" data-color="verde"></li>
+				<li id="boton_1"><div class="color_boton primera" data-color="yellow"></div></li>
+				<li id="boton_2"><div class="color_boton primera" data-color="cyan"></div></li>
+				<li id="boton_3"><div class="color_boton primera" data-color="green"></div></li>
 			</ul>
 			<h3>Escoje el segundo color:</h3>
 			<ul>
-				<li id="boton_4"><div class="color_boton" data-color="negro"></li>
-				<li id="boton_5"><div class="color_boton" data-color="azul"></li>
-				<li id="boton_6"><div class="color_boton" data-color="amarillo"></li>
+				<li id="boton_4"><div class="color_boton segunda" data-color="black"></div></li>
+				<li id="boton_5"><div class="color_boton segunda" data-color="blue"></div></li>
+				<li id="boton_6"><div class="color_boton segunda" data-color="yellow"></div></li>
 			</ul>
 			<h3>Escoje el tercero color:</h3>
 			<ul>
-				<li id="boton_7"><div class="color_boton" data-color="naranja"></li>
-				<li id="boton_8"><div class="color_boton" data-color="cafe"></li>
-				<li id="boton_9"><div class="color_boton" data-color="rojo"></li>
+				<li id="boton_7"><div class="color_boton tercera" data-color="orange"></div></li>
+				<li id="boton_8"><div class="color_boton tercera" data-color="brown"></div></li>
+				<li id="boton_9"><div class="color_boton tercera" data-color="red"></div></li>
 			</ul>
 		</section>
+		<button id="clean">Limpiar</button>
 	</aside>
 	<footer>
 		Todos los derechos reservados  - Bucaramanga Colombia.
 	</footer>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).on("ready", cargoPagina);
+		var color;
+
+		function cargoPagina(){
+
+			$('.primera').on('click', clickBotonColor_1);
+			$('.segunda').on('click', clickBotonColor_2);
+			$('.tercera').on('click', clickBotonColor_3);
+			$('#clean').on('click', Limpiar);
+
+			//Codigo de jquery
+
+		}
+
+		function clickBotonColor_1(){
+			 color = $(this).data('color');
+			 $('#caja_1').css('background', color );
+			 validarBandera();
+			//alert(color);
+		}
+		function clickBotonColor_2(){
+			 color = $(this).data('color');
+			 $('#caja_2').css('background', color );
+			  validarBandera();
+			//alert(color);
+		}
+		function clickBotonColor_3(){
+			 color = $(this).data('color');
+			 $('#caja_3').css('background', color );
+			  validarBandera();
+			//alert(color);
+		}
+		function Limpiar(){
+			$('#caja_1').css('background', 'white' );
+			$('#caja_2').css('background', 'white' );
+			$('#caja_3').css('background', 'white' );
+		}
+		function  validarBandera(){
+			var color_1 = $('#caja_1').css('background');
+			var color_2 = $('#caja_2').css('background');
+			var color_3 = $('#caja_3').css('background');
+
+			if(color_1 =='rgb(255, 255, 0) none repeat scroll 0% 0% / auto padding-box border-box'){
+				if(color_2 =='rgb(0, 0, 255) none repeat scroll 0% 0% / auto padding-box border-box'){
+					if(color_3 =='rgb(255, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box'){
+						alert("Correcto");
+					}
+				}
+			}
+		}
+
+
+
+	</script>
 </body>
 </html>
