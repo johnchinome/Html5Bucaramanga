@@ -1,5 +1,4 @@
 
-
 		$(document).on("ready", cargoPagina);
 		var color;
 
@@ -48,13 +47,13 @@
 			$('#caja_3').css('background', 'white' );
 		}
 		function  validarBandera(){
-			var color_1 = $('#caja_1').css('background');
-			var color_2 = $('#caja_2').css('background');
-			var color_3 = $('#caja_3').css('background');
+			var color_1 = $('#caja_1').css('background-color');
+			var color_2 = $('#caja_2').css('background-color');
+			var color_3 = $('#caja_3').css('background-color');
 
-			if(color_1 =='rgb(255, 255, 0) none repeat scroll 0% 0% / auto padding-box border-box'){
-				if(color_2 =='rgb(0, 0, 255) none repeat scroll 0% 0% / auto padding-box border-box'){
-					if(color_3 =='rgb(255, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box'){
+			if(color_1 =='rgb(255, 255, 0)'){
+				if(color_2 =='rgb(0, 0, 255)'){
+					if(color_3 =='rgb(255, 0, 0)'){
 							$('#resultado').html("Ganaste");
 							$('.primera').off('click', clickBotonColor_1);
 							$('.segunda').off('click', clickBotonColor_2);
